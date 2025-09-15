@@ -36,7 +36,7 @@
 <?php
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = htmlspecialchars($_POST["name"]);
-        $messsage = htmlspecialchars($_POST["message"]);
+        $message = htmlspecialchars($_POST["message"]);
         $entry = "$name: $message\n";
         file_put_contents("messages.txt", $entry, FILE_APPEND);
         header("Location: index.php");
